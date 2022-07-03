@@ -1,0 +1,97 @@
+:root{
+    --primary-color: #dcf64b;
+    --second-color: #a0b435;
+    --black-color: #000000;
+    --black-color-medium: #0c0c0c;
+    --semi-black: #1e1e1e;
+    --white-color: #ffffff;
+    --white-color-alpha: rgba(255,255,255,0.8);
+}
+
+.container{
+    width: 100%;
+    max-width: 1246px;
+    margin: 0 auto;
+    padding: 0rem 1.5rem;
+}
+
+.container-fluid{
+    width: 100%;
+    padding: 0rem 1.8rem;
+}
+
+h2{
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 6.4rem;
+    line-height: 7.7rem;
+    color: var(--white-color);
+}
+
+h2 span{
+    color: var(--primary-color);
+}
+
+.btn-primary{
+    border-radius: 2.4rem;
+    font-weight: 700;
+    line-height: 2.4rem;
+    background-color: var(--primary-color);
+    color: var(--black-color);
+    padding: 1rem 2.6rem;
+    transition: all 0.2s;
+}
+
+.btn-primary:hover{
+    background-color: var(--white-color);
+    transform: scale(1.04);
+}
+
+.btn-primary.empty{
+    border: 2px solid var(--primary-color);
+    border-radius: 2.4rem;
+    color: var(--primary-color);
+    background-color: transparent;
+    transition: all 0.3s;
+}
+
+.btn-primary.empty:hover{
+    color: var(--black-color);
+    background-color: var(--primary-color);
+}
+
+.menu-item{
+    display: inline-block;
+    color: var(--primary-color);
+    font-weight: 700;
+    line-height: 2.4rem;
+}
+
+.tag{
+    border-radius: 5rem;
+    padding: 0.6rem 2rem;
+    background-color: var(--white-color);
+    font-size: 1.3rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"]
+{
+    background-color: var(--semi-black);
+    border: 0.1rem solid var(--semi-black);
+    border-radius: 0.4rem;
+    width: 100%;
+    padding: 2rem;
+    resize: none;
+    color: var(--white-color);
+    outline: none;
+    transition: all 0.4s;
+}
+
+input[type="text"]:hover,
+input[type="password"]:hover
+{
+    border: 1px solid var(--primary-color);
+}

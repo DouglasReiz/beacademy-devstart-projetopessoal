@@ -1,0 +1,211 @@
+/* HEADER*/
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4rem 0rem;
+    z-index: 2022;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*header .container nav .btn-mobile{
+    display: none;
+}*/
+
+header .container nav .menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container nav .menu li{
+    margin-right: 4.8rem;
+    transition: all 0.2s;
+}
+
+header .container nav .menu li a{
+    transition: all 0.2s;
+}
+
+header .container nav .menu li a:hover{
+    color: var(--white-color);
+    transform: translateY(-8%);
+}
+
+header .container nav .menu-social{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-left: 4rem;
+    gap:3.4rem
+}
+
+header .container nav .menu-social li{
+    transition: all 0.2s;
+}
+
+header .container nav .menu-social li:hover{
+    transform: translateY(-8%);
+}
+
+/* Section hero*/
+
+.s-hero{
+    background: url(../img/1101999.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+}
+
+.s-hero .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.s-hero .container .title-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 59.2rem;
+    margin-top: 24rem;
+    padding-bottom: 5.8rem;
+}
+
+.s-hero .container .title-box h1{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 6.4rem;
+    line-height: 7.7rem;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.s-hero .container .title-box h1 span{
+    color:var(--primary-color);
+}
+
+.s-hero .container .title-box h2{
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 6rem;
+    text-align: center;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 1.3rem;
+
+}
+
+.s-hero .container .title-box p{
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-align: center;
+    color: rgba(220, 246, 75, 0.8);
+}
+
+.s-hero .container .title-box .techs{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.6rem;
+    margin-top: 2.3rem;
+}
+.s-hero .container .title-box .techs img{
+    transition: all 0.2s;
+}
+
+.s-hero .container .title-box .techs img:hover{
+    transform: translateY(-12%);
+}
+
+.s-hero .container .title-box .btn-primary{
+    margin-top: 4rem;
+    padding: 1rem 5.6rem;
+}
+
+
+
+
+/*  LOGIN */
+.s-login {
+    padding-top: 4rem;
+    padding-bottom: 13rem;
+    
+}
+
+.s-login .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.s-login .container .title-login{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 100%;
+    max-width: 34.3rem;
+}
+
+
+
+.s-login .container .form-login{
+    width:100%;
+    max-width: 48.6rem ;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap:3.1rem;
+}
+
+
+
+.s-login .container .form-login .input-group input[type="text"],
+.s-login .container .form-login .input-group input[type="password"]{
+    margin-bottom: 3.1rem;
+    
+}
+
+.input-button{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.input-button .btn-primary{
+    margin: 1rem;
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--black-color-medium);
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .container .copy {
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+    line-height: 2.4rem;
+    padding: 5.2rem;
+}

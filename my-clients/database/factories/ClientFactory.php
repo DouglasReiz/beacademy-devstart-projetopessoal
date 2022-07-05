@@ -19,9 +19,10 @@ class ClientFactory extends Factory
     {
         return [
             'name' => $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'CPF' => $this->faker->unique()->safeCpf(),
+            'email'=> $this->faker->unique()->safeEmail(),
+            'phone' => $this->faker->unique()->phoneNumber(),
+            'request' => $this->faker->randomNumber(),
+            'trademark' => $this->faker->domainName(),
             'remember_token' => Str::random(10),
         ];
     }

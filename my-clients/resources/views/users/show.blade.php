@@ -30,6 +30,14 @@
                         <td>
                             <a href="{{ route('users.edit', $user->id)}}" class="btn-primary">Editar</a>
                         </td>
+                        <td>
+                            <form action="{{ route('users.delete', $user->id) }}" method="Post">
+                                @method('DELETE')
+                                @csrf
+
+                                <button type="submit" class="btn-primary delete">Deletar</button>
+                            </form>
+                        </td>
                     </tr>
                 </tbody>
             </table>

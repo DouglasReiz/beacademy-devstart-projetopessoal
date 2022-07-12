@@ -61,6 +61,11 @@ h2 span{
     background-color: var(--primary-color);
 }
 
+.btn-primary.delete{
+    background-color: var(--white-color);
+
+}
+
 .menu-item{
     display: inline-block;
     color: var(--primary-color);

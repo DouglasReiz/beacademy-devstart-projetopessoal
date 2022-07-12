@@ -52,4 +52,14 @@ class UserController extends Controller
         
         return redirect()->route('users.index');
     }
+
+    public function destroy($id)
+    {
+        if(!$user = $this->model->find($id))
+            return redirect()->route('user.index');
+
+        $user->delete($id);
+
+        return redirect()->route('users.index');
+    }
 }

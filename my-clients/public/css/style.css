@@ -76,7 +76,7 @@ h2 span{
 
 .btn-primary:hover{
     background-color: var(--white-color);
-    transform: scale(1.04);
+    /* transform: scale(1.04); */
 }
 
 .btn-primary.empty{
@@ -284,6 +284,7 @@ header .container nav .menu-social li:hover{
     background-color: var(--black-color-medium);
     border-radius: 1rem;
     width: 100%;
+    align-items: center;
     text-align: center;
     font-weight: 400;
     font-size: 1.5rem;
@@ -293,6 +294,12 @@ header .container nav .menu-social li:hover{
     margin-top: 2rem;
     margin-bottom: 5rem;
     padding: 1rem 4.3rem;
+}
+
+.s-hero .container .table .t-users .btn-primary.delete{
+    background-color: red;
+    color: var(--black-color-medium);
+    margin-bottom: 2rem;
 }
 
 .s-edit .container{

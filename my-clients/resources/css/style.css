@@ -1,5 +1,6 @@
 /* HEADER*/
 header{
+    background-color: var(--semi-black);
     position: absolute;
     top: 0;
     left: 0;
@@ -36,6 +37,7 @@ header .container nav .menu li{
 }
 
 header .container nav .menu li a{
+    color: var(--primary-color);
     transition: all 0.2s;
 }
 

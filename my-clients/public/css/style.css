@@ -34,7 +34,7 @@ button{
     --second-color: #a0b435;
     --black-color: #000000;
     --black-color-medium: #0c0c0c;
-    --semi-black: #1e1e1e;
+    --semi-black: #383838;
     --white-color: #ffffff;
     --white-color-alpha: rgba(255,255,255,0.8);
 }
@@ -76,7 +76,7 @@ h2 span{
 
 .btn-primary:hover{
     background-color: var(--white-color);
-    /* transform: scale(1.04); */
+    transform: scale(1.04);
 }
 
 .btn-primary.empty{
@@ -90,6 +90,11 @@ h2 span{
 .btn-primary.empty:hover{
     color: var(--black-color);
     background-color: var(--primary-color);
+}
+
+.btn-primary.delete{
+    background-color: var(--white-color);
+
 }
 
 .menu-item{
@@ -131,6 +136,7 @@ input[type="password"]:hover
 }
 /* HEADER*/
 header{
+    background-color: var(--semi-black);
     position: absolute;
     top: 0;
     left: 0;
@@ -167,6 +173,7 @@ header .container nav .menu li{
 }
 
 header .container nav .menu li a{
+    color: var(--primary-color);
     transition: all 0.2s;
 }
 

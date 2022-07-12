@@ -13,6 +13,18 @@
     <link rel="stylesheet" href="{{ asset('css/style.css')}}">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="menu">
+                    <li class="menu-item"><a href="{{ route('users.index') }}">Usuários</a></li>
+                    <li class="menu-item"><a href="{{ route('clients.index') }}">Clientes</a></li>
+                </ul>
+                
+            </nav>
+        </div>
+    </header>
+
     @yield('body')
 </body>
 </html>

@@ -13,6 +13,7 @@
     max-width: 1246px;
     margin: 0 auto;
     padding: 0rem 1.5rem;
+    color: var(--primary-color);
 }
 
 .container-fluid{
@@ -77,6 +78,7 @@ h2 span{
 }
 
 input[type="text"],
+input[type="email"],
 input[type="password"]
 {
     background-color: var(--semi-black);
@@ -91,6 +93,7 @@ input[type="password"]
 }
 
 input[type="text"]:hover,
+input[type="email"]:hover,
 input[type="password"]:hover
 {
     border: 1px solid var(--primary-color);

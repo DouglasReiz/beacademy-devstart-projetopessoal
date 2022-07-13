@@ -4,7 +4,6 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-
     font-family: "poppins", sans-serif;
 }
 
@@ -30,11 +29,12 @@ button{
     cursor: pointer;
 }
 :root{
-    --primary-color: #dcf64b;
-    --second-color: #a0b435;
+    --primary-color:   #1E90FF;
+    --second-color: #87CEFA;
     --black-color: #000000;
     --black-color-medium: #0c0c0c;
     --semi-black: #383838;
+    --delete-color: #af0000;
     --white-color: #ffffff;
     --white-color-alpha: rgba(255,255,255,0.8);
 }
@@ -93,8 +93,14 @@ h2 span{
 }
 
 .btn-primary.delete{
-    background-color: var(--white-color);
+    border: 1px solid var(--semi-black);
+    background-color: var(--delete-color);
+    transition: all 0.2s;
+}
 
+.btn-primary.delete:hover{
+    background-color: var(--semi-black);
+    border-color: var(--delete-color);
 }
 
 .menu-item{
@@ -115,6 +121,7 @@ h2 span{
 
 input[type="text"],
 input[type="email"],
+input[type="phone"],
 input[type="password"]
 {
     background-color: var(--semi-black);
@@ -130,10 +137,28 @@ input[type="password"]
 
 input[type="text"]:hover,
 input[type="email"]:hover,
+input[type="phone"]:hover,
 input[type="password"]:hover
 {
     border: 1px solid var(--primary-color);
 }
+
+textarea{
+    background-color: var(--semi-black);
+    border: 0.1rem solid var(--semi-black);
+    border-radius: 0.4rem;
+    width: 100%;
+    padding: 2rem;
+    resize: none;
+    color: var(--white-color);
+    outline: none;
+    transition: all 0.4s;
+}
+
+textarea:hover{
+    border: 1px solid var(--primary-color);
+}
+
 /* HEADER*/
 header{
     background-color: var(--semi-black);
@@ -156,10 +181,6 @@ header .container nav{
     align-items: center;
     justify-content: space-between;
 }
-
-/*header .container nav .btn-mobile{
-    display: none;
-}*/
 
 header .container nav .menu{
     display: flex;
@@ -201,7 +222,7 @@ header .container nav .menu-social li:hover{
 /* Section hero*/
 
 .s-hero{
-    background: url(../img/1101999.jpg);
+    background: url();
     background-size: cover;
     background-repeat: no-repeat;
     background-position: fixed;
@@ -304,10 +325,12 @@ header .container nav .menu-social li:hover{
 }
 
 .s-hero .container .table .t-users .btn-primary.delete{
-    background-color: red;
+
     color: var(--black-color-medium);
     margin-bottom: 2rem;
 }
+
+/* SECTION EDIT USER*/
 
 .s-edit .container{
     padding-top: 3rem;
@@ -336,6 +359,42 @@ header .container nav .menu-social li:hover{
     height: 2rem;
 
 
+}
+
+.s-create-client .container{
+    margin-top: 5rem;
+    padding-top: 3rem;
+}
+
+.s-create-client .container .form-create{
+    width: 100%;
+    max-width: 40rem;
+}
+
+.s-create-client .container .form-create .input-group{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.s-create-client .container .form-create .input-group .form-image{
+    display: none;
+}
+
+.s-create-client .container .form-create .input-group .form-label-image{
+    background-color: rgba(30,144,255,0.8);
+    color: var(--primary-color);
+    border-radius: 1rem;
+    font-size: 2.7rem;
+    color: #333;
+    margin-left: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.s-create-client .container .form-create .input-group .form-label-image:hover{
+    background-color: var(--white-color);
+    transform: scale(1.04);
 }
 
 /*  LOGIN */
@@ -386,6 +445,103 @@ header .container nav .menu-social li:hover{
 
 .input-button .btn-primary{
     margin: 1rem;
+}
+
+/* Section Clients*/
+
+.s-client{
+    background: url();
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: fixed;
+}
+
+.s-client .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.s-client .container .title-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 59.2rem;
+    margin-top: 24rem;
+    padding-bottom: 5.8rem;
+}
+
+.s-client .container .title-box h1{
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 6.4rem;
+    line-height: 7.7rem;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.s-client .container .title-box h1 span{
+    color:var(--primary-color);
+}
+
+.s-client .container .title-box h2{
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 6rem;
+    text-align: center;
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 1.3rem;
+
+}
+
+.s-client .container .title-box p{
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.7rem;
+    text-align: center;
+    color: rgba(220, 246, 75, 0.8);
+}
+
+.s-client .container .btn-primary{
+    
+    margin-top: 4rem;
+    padding: 1rem 5.6rem;
+}
+
+.s-client .container .table{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    line-height: 7rem;
+    margin-top: 4rem;
+    padding-bottom: 5.8rem;
+}
+
+.s-client .container .table .t-clients{
+    border: outset;
+    border-color: var(--primary-color);
+    background-color: var(--black-color-medium);
+    border-radius: 1rem;
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.s-client .container .table .t-users .btn-primary{
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    padding: 1rem 4.3rem;
+}
+
+.s-client .container .table .t-users .btn-primary.delete{
+
+    color: var(--black-color-medium);
+    margin-bottom: 2rem;
 }
 
 /* Footer */

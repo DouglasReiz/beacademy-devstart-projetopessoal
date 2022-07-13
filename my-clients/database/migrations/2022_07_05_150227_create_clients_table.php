@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('phone')->unique();
-            $table->integer('request');
+            $table->string('request');
             $table->string('trademark');
             $table->timestamps();
         });

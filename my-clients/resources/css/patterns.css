@@ -1,9 +1,10 @@
 :root{
-    --primary-color: #dcf64b;
-    --second-color: #a0b435;
+    --primary-color:   #1E90FF;
+    --second-color: #87CEFA;
     --black-color: #000000;
     --black-color-medium: #0c0c0c;
     --semi-black: #383838;
+    --delete-color: #af0000;
     --white-color: #ffffff;
     --white-color-alpha: rgba(255,255,255,0.8);
 }
@@ -62,8 +63,14 @@ h2 span{
 }
 
 .btn-primary.delete{
-    background-color: var(--white-color);
+    border: 1px solid var(--semi-black);
+    background-color: var(--delete-color);
+    transition: all 0.2s;
+}
 
+.btn-primary.delete:hover{
+    background-color: var(--semi-black);
+    border-color: var(--delete-color);
 }
 
 .menu-item{
@@ -84,6 +91,7 @@ h2 span{
 
 input[type="text"],
 input[type="email"],
+input[type="phone"],
 input[type="password"]
 {
     background-color: var(--semi-black);
@@ -99,7 +107,24 @@ input[type="password"]
 
 input[type="text"]:hover,
 input[type="email"]:hover,
+input[type="phone"]:hover,
 input[type="password"]:hover
 {
+    border: 1px solid var(--primary-color);
+}
+
+textarea{
+    background-color: var(--semi-black);
+    border: 0.1rem solid var(--semi-black);
+    border-radius: 0.4rem;
+    width: 100%;
+    padding: 2rem;
+    resize: none;
+    color: var(--white-color);
+    outline: none;
+    transition: all 0.4s;
+}
+
+textarea:hover{
     border: 1px solid var(--primary-color);
 }

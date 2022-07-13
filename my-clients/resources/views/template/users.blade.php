@@ -19,6 +19,7 @@
                 <ul class="menu">
                     <li class="menu-item"><a href="{{ route('users.index') }}">Usuários</a></li>
                     <li class="menu-item"><a href="{{ route('clients.index') }}">Clientes</a></li>
+                    <li class="menu-item"><a href="{{ route('clients.create') }}">Novo Clientes</a></li>
                 </ul>
                 
             </nav>

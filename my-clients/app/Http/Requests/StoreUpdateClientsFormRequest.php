@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreUpdateUserFormRequest extends FormRequest
+class StoreUpdateClientsFormRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,14 +26,15 @@ class StoreUpdateUserFormRequest extends FormRequest
         $id = $this->id?? '';
         $rules = [
             'name' => 'required|string|max:100|min:3',
-            'email'=>'required|email|unique:users,email,{$id},id',
-            'password' => 'required|min:4|max:12',
-            'image' =>'file|mimes:jpeg,png,jpg,svg,webp'
+            'email'=>'required|email|unique:clients,email,{$id},id',
+            'phone'=> 'required|string|min:9|unique:clients,phone,{$id},id',
+            'request'=>'string|max:200|min:1',
+            'trademark'=>'string|max:100|min:1'
         ];
 
         if($this->method('PUT'))
         {
-            $rules['password']=[
+            $rules['trademark']=[
                 'nullable',
                 'min:4',
                 'max:12'

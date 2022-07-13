@@ -14,5 +14,6 @@ class Client extends Model
         'email',
         'phone',
         'request',
+        'trademark',
     ];
 }

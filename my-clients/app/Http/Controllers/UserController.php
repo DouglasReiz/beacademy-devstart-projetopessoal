@@ -62,4 +62,27 @@ class UserController extends Controller
 
         return redirect()->route('users.index');
     }
+
+    public function create()
+    {
+        return view('users.create');
+    }
+
+    public function store(StoreUpdateUserFormRequest $request)
+    {
+        $data =$request->all();
+        $data['password'] = bcrypt($request->password);
+
+        if($request->image){
+            $file = $request['image'];
+            $path = $file->store('profile', 'public');
+            $data['image']= $path;
+        }
+
+        $this->model->create($data);
+
+        $request->session()->flash('create','usuario cadastrado com sucesso');
+
+        return redirect()->route('users.index')->with('create','usuario cadastrado com sucesso');
+    }
 }

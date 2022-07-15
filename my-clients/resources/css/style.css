@@ -1,18 +1,20 @@
 /* HEADER*/
 header{
-    background-color: var(--semi-black);
+    background-color: var(--black-color);
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     padding: 4rem 0rem;
     z-index: 2022;
+    border-bottom: inset var(--primary-color);
 }
 
 header .container{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+
 }
 
 header .container nav{
@@ -25,6 +27,7 @@ header .container nav .menu{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-right: 32rem;
 }
 
 header .container nav .menu li{
@@ -46,16 +49,25 @@ header .container nav .menu-social{
     display: flex;
     justify-content: space-between;
     align-content: center;
-    margin-left: 4rem;
+    margin-left: 35rem;
     gap:3.4rem
 }
 
 header .container nav .menu-social li{
+    cursor: pointer;
     transition: all 0.2s;
 }
 
 header .container nav .menu-social li:hover{
     transform: translateY(-8%);
+}
+
+header .container nav .menu-social li a{
+    color: var(--primary-color);
+}
+
+header .container nav .menu-social li a:hover{
+    color: var(--white-color);
 }
 
 /* Section hero*/
@@ -171,13 +183,30 @@ header .container nav .menu-social li:hover{
 
 /* SECTION EDIT USER*/
 
+.s-edit {
+    padding-top: 4rem;
+    padding-bottom: 13rem;
+    margin-top: 10rem;
+}
+
 .s-edit .container{
-    padding-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.s-edit .container .title-edit{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 100%;
+    max-width: 34.3rem;
 }
 
 .s-edit .container .form-edit{
     width: 100%;
     max-width: 40rem;
+    display: inline;
 }
 
 .s-edit .container .form-edit .input-group{
@@ -196,13 +225,28 @@ header .container nav .menu-social li:hover{
     padding-bottom: 3rem;
     margin-left: 2rem;
     height: 2rem;
+}
 
+/*SECTION CREATE*/
 
+.s-create-client{
+    padding-top: 4rem;
+    padding-bottom: 13rem;
+    margin-top: 10rem;
 }
 
 .s-create-client .container{
-    margin-top: 5rem;
-    padding-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.s-create .container .title-create{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 100%;
+    max-width: 34.3rem;
 }
 
 .s-create-client .container .form-create{
@@ -222,9 +266,10 @@ header .container nav .menu-social li:hover{
 .s-create-client .container .form-create .input-group .form-label-image{
     background-color: rgba(30,144,255,0.8);
     color: var(--primary-color);
+    border: outset;
     border-radius: 1rem;
-    font-size: 2.7rem;
-    color: #333;
+    font-size: 2.3rem;
+    color: rgb(0, 0, 0);
     margin-left: 2rem;
     height: 2rem;
     cursor: pointer;
@@ -240,7 +285,7 @@ header .container nav .menu-social li:hover{
 .s-login {
     padding-top: 4rem;
     padding-bottom: 13rem;
-    
+    margin-top: 10rem;
 }
 
 .s-login .container{
@@ -257,8 +302,6 @@ header .container nav .menu-social li:hover{
     max-width: 34.3rem;
 }
 
-
-
 .s-login .container .form-login{
     width:100%;
     max-width: 48.6rem ;
@@ -268,11 +311,55 @@ header .container nav .menu-social li:hover{
     gap:3.1rem;
 }
 
-
-
 .s-login .container .form-login .input-group input[type="text"],
 .s-login .container .form-login .input-group input[type="password"]{
-    margin-bottom: 3.1rem;
+    margin-bottom: 1rem;
+    
+}
+
+.input-button{
+    justify-content: flex-end;
+}
+
+.btn-primary{
+    
+    margin: 1rem;
+}
+
+/*SECTION REGISTER*/
+
+.s-register {
+    padding-top: 4rem;
+    padding-bottom: 13rem;
+    margin-top: 15rem;
+}
+
+.s-register .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.s-register .container .title-register{
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    width: 100%;
+    max-width: 34.3rem;
+}
+
+.s-register .container .form-register{
+    width:100%;
+    max-width: 48.6rem ;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap:3.1rem;
+}
+
+.s-register .container .form-register .input-group input[type="text"],
+.s-register .container .form-register .input-group input[type="password"]{
+    margin-bottom: 1rem;
     
 }
 
@@ -287,6 +374,30 @@ header .container nav .menu-social li:hover{
 }
 
 /* Section Clients*/
+
+.alert {
+    padding: 20px;
+    background-color: #009b00; /* Red */
+    color: white;
+    margin-bottom: 15px;
+  }
+  
+  /* The close button */
+  .closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  /* When moving the mouse over the close button */
+  .closebtn:hover {
+    color: black;
+  }
 
 .s-client{
     background: url();
@@ -343,6 +454,10 @@ header .container nav .menu-social li:hover{
     text-align: center;
     color: rgba(220, 246, 75, 0.8);
 }
+.s-client .container .create-client{
+    margin-right: 100rem;
+    white-space: nowrap;
+}
 
 .s-client .container .btn-primary{
     
@@ -386,7 +501,7 @@ header .container nav .menu-social li:hover{
 /* Footer */
 
 footer{
-    background-color: var(--black-color-medium);
+    background-color: var(--black-color);
 }
 
 footer .container {
@@ -400,4 +515,15 @@ footer .container .copy {
     font-weight: 400;
     line-height: 2.4rem;
     padding: 5.2rem;
+    text-align: center;
+}
+
+footer .container .copy .badge-base a{
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.2s;
+}
+
+footer .container .copy .badge-base a:hover{
+    transform: translateY(-8%);
+    color: var(--primary-color);
 }

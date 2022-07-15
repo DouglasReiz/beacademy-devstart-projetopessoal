@@ -52,4 +52,26 @@ class ClientController extends Controller
 
         return redirect()->route('clients.index') ;
     }
+
+    public function edit($id)
+    {
+        $client = Client::find($id);
+
+        $title = 'Cliente '. $client->name;
+
+        return view('clients.edit', compact('client','title'));
+    }
+
+    public function update(StoreUpdateClientsFormRequest $request, $id){
+        if(!$client = $this->model->find($id))
+            return redirect()->route('clients.index');
+
+        $data = $request->only('name','email');
+        if($request->password)
+            $data['password']=bcrypt($request->password);
+
+        $client->update($data);
+        
+        return redirect()->route('clients.index');
+    }
 }

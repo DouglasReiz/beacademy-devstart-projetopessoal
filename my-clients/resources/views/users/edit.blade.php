@@ -26,7 +26,7 @@
           <input type="password" class="form-control" id="password" name="password">
         </div>
     
-<!--         <div class="input-group">
+        <div class="input-group">
           <label for="image" class="form-label">selecione uma imagem</label>
           <input type="file" class="form-image" id="image" name="image">
         </div>
@@ -36,7 +36,7 @@
           <label class="form-check-label" for="flexCheckDefault">
             Adminstrador
           </label>
-        </div> -->
+        </div>
     
         <button type="submit" class="btn btn-primary">Enviar</button>
       </form>

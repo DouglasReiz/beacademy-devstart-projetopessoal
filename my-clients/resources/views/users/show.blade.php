@@ -2,6 +2,8 @@
 @section('title', $title)
 @section('body')
 
+
+
 <div class="s-hero">
     <div class="container">
         <div class="title-box">
@@ -29,12 +31,10 @@
                         <td>{{ date('d/m/y - H:i', strtotime($user->created_at)) }}</td>
                         <td>
                             <a href="{{ route('users.edit', $user->id)}}" class="btn-primary">Editar</a>
-                        </td>
-                        <td>
                             <form action="{{ route('users.delete', $user->id) }}" method="Post">
                                 @method('DELETE')
                                 @csrf
-
+    
                                 <button type="submit" class="btn-primary delete">Deletar</button>
                             </form>
                         </td>

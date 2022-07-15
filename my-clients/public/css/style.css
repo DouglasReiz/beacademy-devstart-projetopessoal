@@ -377,18 +377,26 @@ header .container nav .menu-social li a:hover{
 }
 
 .s-edit .container .form-edit .input-group .form-image{
-    background-color: #FFF;
-    border: 0.1rem solid #e4e4e4;
-    border-radius: 1rem;
-    font-size: 1.1rem;
-    color: #333;
-    padding-left: 0.5rem;
-    padding-top: 0.9rem;
-    padding-bottom: 3rem;
-    margin-left: 2rem;
-    height: 2rem;
+    display: none;
 }
 
+.s-edit .container .form-edit .input-group .form-label-image{
+    background-color: rgba(30,144,255,0.8);
+    color: var(--primary-color);
+    border: outset;
+    border-radius: 1rem;
+    font-size: 2.3rem;
+    color: rgb(0, 0, 0);
+    margin-left: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.s-edit .container .form-edit .input-group .form-label-image:hover{
+    background-color: var(--white-color);
+    transform: scale(1.04);
+}
 /*SECTION CREATE*/
 
 .s-create-client{
@@ -537,15 +545,15 @@ header .container nav .menu-social li a:hover{
 
 /* Section Clients*/
 
-.alert {
+.s-client .container .alert {
     padding: 20px;
     background-color: #009b00; /* Red */
     color: white;
     margin-bottom: 15px;
-  }
+}
   
   /* The close button */
-  .closebtn {
+.s-client .container .alert .closebtn {
     margin-left: 15px;
     color: white;
     font-weight: bold;
@@ -554,12 +562,12 @@ header .container nav .menu-social li a:hover{
     line-height: 20px;
     cursor: pointer;
     transition: 0.3s;
-  }
+}
   
   /* When moving the mouse over the close button */
-  .closebtn:hover {
+.s-client .container .alert .closebtn:hover {
     color: black;
-  }
+}
 
 .s-client{
     background: url();

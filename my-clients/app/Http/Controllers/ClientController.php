@@ -48,9 +48,9 @@ class ClientController extends Controller
 
         $this ->model->create($data);
 
-        //$request->session()->flash('create','usuario cadastrado com sucesso');
+        $request->session()->flash('create','cliente cadastrado com sucesso');
 
-        return redirect()->route('clients.index') ;
+        return redirect()->route('clients.index')->with('create','cliente cadastrado com sucesso');
     }
 
     public function edit($id)

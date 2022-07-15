@@ -2,19 +2,20 @@
 @section('title', 'Listagem de clientes')
 @section('body')
 
-@if(session()->has('create'))
-    <div class="alert">
-        <strong>Atenção</strong> {{ session()->get('create') }}.
-        <button class="closebtn" onclick="this.parentElement.style.display='none';">&times;</button>
-    </div>
-@endif
 
 <div class="s-client">
     <div class="container">
         <div class="title-box">
             <h1>Listagem de Clientes</h1>
         </div>
-
+        
+        @if(session()->has('create'))
+            <div class="alert">
+                <strong>Atenção</strong> {{ session()->get('create') }}.
+                <button class="closebtn" onclick="this.parentElement.style.display='none';">&times;</button>
+            </div>
+        @endif
+        
         <div class="create-client">
             <a href="{{ route('clients.create') }}" class="btn-primary">Novo cliente</a>
         </div>

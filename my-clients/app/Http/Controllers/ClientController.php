@@ -72,6 +72,10 @@ class ClientController extends Controller
 
         $client->update($data);
         
-        return redirect()->route('clients.index');
+        $request->session()->flash('update','cliente atualizado com sucesso');
+
+        return redirect()->route('clients.index')->with('update','cliente atualizado com sucesso');
     }
+
+    
 }

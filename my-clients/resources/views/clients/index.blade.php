@@ -15,6 +15,13 @@
                 <button class="closebtn" onclick="this.parentElement.style.display='none';">&times;</button>
             </div>
         @endif
+
+        @if(session()->has('update'))
+            <div class="alert">
+                <strong>Atenção</strong> {{ session()->get('update') }}.
+                <a class="closebtn" onclick="this.parentElement.style.display='none';">&times;</a>
+            </div>
+        @endif
         
         <div class="create-client">
             <a href="{{ route('clients.create') }}" class="btn-primary">Novo cliente</a>

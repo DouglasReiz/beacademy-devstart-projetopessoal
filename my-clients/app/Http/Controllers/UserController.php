@@ -48,6 +48,8 @@ class UserController extends Controller
         if($request->password)
             $data['password']=bcrypt($request->password);
 
+        $data['is_admin']= $request -> admin? 1:0;
+
         $user->update($data);
         
         return redirect()->route('users.index');

@@ -10,17 +10,18 @@
         </div>
         
         <div class="table">
-            <table class="t-users">
+            <table class="table table-dark table-striped">
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>phone</th>
-                        <th>request</th>
-                        <th>trademark</th>
-                        <th>Data Cadastro</th>
-                        <th>Ações</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">phone</th>
+                        <th scope="col">request</th>
+                        <th scope="col">trademark</th>
+                        <th scope="col">Data Cadastro</th>
+                        <th scope="col">Ações</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,12 +34,13 @@
                         <td>{{ $client->trademark }}</td>
                         <td>{{ date('d/m/y - H:i', strtotime($client->created_at)) }}</td>
                         <td>
-                            <a href="{{ route('clients.edit', $client->id)}}" class="btn-primary">Editar</a>
+                            <a href="{{ route('clients.edit', $client->id)}}" class="btn btn-warning">Editar</a>
+                        </td>
+                        <td>
                             <form action="{{ route('clients.delete', $client->id) }}" method="Post">
                                 @method('DELETE')
                                 @csrf
-    
-                                <button type="submit" class="btn-primary delete">Deletar</button>
+                                <button type="submit" class="btn btn-danger">excluir</button>
                             </form>
                         </td>
                     </tr>

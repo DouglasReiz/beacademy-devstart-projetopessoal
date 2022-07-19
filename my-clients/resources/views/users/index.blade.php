@@ -4,37 +4,39 @@
 
 <div class="s-hero">
     <div class="container">
-        <div class="title-box">
-            <h1>Listagem de Usuários</h1>
+        <div class="mb-5">
+            <h1 class="">Listagem de Usuários</h1>
 
         </div>
 
-        <div class="table">
-            <table class="t-users">
+
+            <table class="table table-dark table-striped">
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>Data Cadastro</th>
-                        <th>Ações</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Data Cadastro</th>
+                        <th scope="col">Ações</th>
                     </tr>
                 </thead>
                 <tbody>
                     @foreach($users as $user)
                     <tr>
-                        <th>{{ $user->id }}</th>
+                        <th scope="row">{{ $user->id }}</th>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ date('d/m/y - H:i', strtotime($user->created_at)) }}</td>
                         <td>
-                           <a href="{{ route('users.show', $user->id)}}" class="btn-primary">Visualizar</a>
+                           <a href="{{ route('users.show', $user->id)}}" class="btn btn-primary">Visualizar</a>
                         </td>
                     </tr>
                     @endforeach
                 </tbody>
             </table>
-        </div>
+        
+        {{$users->links('pagination::bootstrap-4')}}
+
     </div>
 </div>
 @endsection

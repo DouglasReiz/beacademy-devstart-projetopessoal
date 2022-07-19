@@ -4,23 +4,24 @@
 
 
 
-<div class="s-hero">
-    <div class="container">
-        <div class="title-box">
+
+    <div class="container p-5">
+        <div class="mb-4">
             <h1>Usuário {{$user->name }}</h1>
             
         </div>
             
 
         <div class="table">
-            <table class="t-users">
+            <table class="table table-dark table-striped">
                 <thead>
                     <tr>
-                        <th>Id</th>
-                        <th>Nome</th>
-                        <th>Email</th>
-                        <th>Data Cadastro</th>
-                        <th>Ações</th>
+                        <th scope="col">Id</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Data Cadastro</th>
+                        <th scope="col">Ações</th>
+                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody>
@@ -30,12 +31,14 @@
                         <td>{{ $user->email }}</td>
                         <td>{{ date('d/m/y - H:i', strtotime($user->created_at)) }}</td>
                         <td>
-                            <a href="{{ route('users.edit', $user->id)}}" class="btn-primary">Editar</a>
+                            <a href="{{ route('users.edit', $user->id)}}" class="btn btn-warning">Editar</a>
+                        </td>
+                        <td>
                             <form action="{{ route('users.delete', $user->id) }}" method="Post">
                                 @method('DELETE')
                                 @csrf
     
-                                <button type="submit" class="btn-primary delete">Deletar</button>
+                                <button type="submit" class="btn btn-danger">Deletar</button>
                             </form>
                         </td>
                     </tr>
@@ -43,6 +46,6 @@
             </table>
         </div>
     </div>
-</div>
+
 
 @endsection

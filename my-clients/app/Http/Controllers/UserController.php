@@ -14,6 +14,7 @@ class UserController extends Controller
         $this->model = $user;
     }
 
+
     public function index()
     {
         $users = User::paginate(6);

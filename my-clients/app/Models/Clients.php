@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Client extends Model
+class Clients extends Model
 {
     use HasFactory;
 
@@ -15,5 +15,12 @@ class Client extends Model
         'phone',
         'request',
         'trademark',
+        'active',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
+
 }

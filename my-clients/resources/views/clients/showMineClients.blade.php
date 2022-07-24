@@ -1,12 +1,12 @@
 @extends('template.users')
-@section('title', 'Listagem de clientes')
+@section('title', "Listagem de clientes")
 @section('body')
 
 
 <div class="s-client">
     <div class="container">
         <div class="title-box">
-            <h1>Listagem de Clientes</h1>
+            <h1>Listagem de Clientes do {{Auth::user()->name}}</h1>
         </div>
         
         @if(session()->has('create'))
@@ -33,7 +33,6 @@
                 <thead>
                     <tr>
                         <th scope="col">Id</th>
-                        <th scope="col">Usuário</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Email</th>
                         <th scope="col">Data Cadastro</th>
@@ -44,7 +43,6 @@
                     @foreach($clients as $client)
                     <tr>
                         <th scope="row">{{ $client->id }}</th>
-                        <td>{{ $client->user->name }}</td>
                         <td>{{ $client->name }}</td>
                         <td>{{ $client->email }}</td>
                         <td>{{ date('d/m/y - H:i', strtotime($client->created_at)) }}</td>
@@ -56,7 +54,6 @@
                 </tbody>
             </table>
         </div>
-
     </div>
 </div>
 @endsection

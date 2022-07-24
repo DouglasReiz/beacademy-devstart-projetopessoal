@@ -15,11 +15,16 @@ return new class extends Migration
     {
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')
+            ->constrained('users')
+            ->onDelete('CASCADE')
+            ->onUpdate('CASCADE');
             $table->string('name');
             $table->string('email')->unique();
             $table->string('phone')->unique();
-            $table->string('request');
+            $table->text('request');
             $table->string('trademark');
+            $table->boolean('active')->default(true);
             $table->timestamps();
         });
     }

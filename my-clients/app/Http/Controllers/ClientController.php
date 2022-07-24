@@ -3,32 +3,58 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Client;
 use App\Http\Requests\StoreUpdateClientsFormRequest;
+use App\Models\Clients;
+use App\Models\User;
 
 class ClientController extends Controller
 {
-    public function __construct(Client $client)
+    protected $user;
+    protected $client;
+
+    public function __construct(User $user, Clients $client)
     {
-        $this->model = $client;
+        $this->user = $user;
+        $this->clients = $client;
+    }
+
+
+    public function home()
+    {
+        $user= User::all();
+
+        $client= Clients::all();
+
+        return view('index', compact('user', 'client'));
     }
 
 
     public function index()
     {
-        $clients = Client::paginate(6);
+        $clients = Clients::all();
 
         return view('clients.index', compact('clients'));
     }
 
     public function show($id)
     {
-        if(!$client = Client::find($id))
+        if(!$client = Clients::find($id))
             return redirect()->route('clients.show');
 
         $title = $client->name;
         
         return view('clients.show', compact('client', 'title'));
+    }
+
+    public function showMines($userId)
+    {
+        if(!$user = $this->user->find($userId)){
+            return redirect()->back();
+        }
+
+        $clients = $user->clients()->get();
+        
+        return view('clients.showMineClients', compact( 'user','clients'));
     }
 
     public function create()
@@ -55,7 +81,7 @@ class ClientController extends Controller
 
     public function edit($id)
     {
-        $client = Client::find($id);
+        $client = Clients::find($id);
 
         $title = 'Cliente '. $client->name;
 

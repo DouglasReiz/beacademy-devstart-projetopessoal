@@ -30,6 +30,8 @@
                     <li class="nav-item">
                         <a href="{{ route('clients.index') }}" class="nav-link">Clientes</a>
                     </li>
+
+
                 </ul>
 
                 <h1 class="text-light">Sua Agenda</h1>

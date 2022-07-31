@@ -28,7 +28,7 @@ class StoreUpdateUserFormRequest extends FormRequest
             'name' => 'required|string|max:100|min:3',
             'email'=>'required|email|unique:users,email,{$id},id',
             'password' => 'required|min:4|max:12',
-            'image' =>'file|mimes:jpeg,png,jpg,svg,webp'
+            'image' =>'nullable|file|mimes:jpeg,png,jpg,svg,webp'
         ];
 
         if($this->method('PUT'))

@@ -24,17 +24,24 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div class="container-fluid">
                 <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a href="{{ route('users.index') }}" class="nav-link">Usuários</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ route('clients.index') }}" class="nav-link">Clientes</a>
-                    </li>
+                @if(Auth::user())
+                    @if(Auth::user()->is_admin)
+                        <li class="nav-item">
+                            <a href="{{ route('users.index') }}" class="nav-link">Usuários</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ route('clients.index') }}" class="nav-link">Clientes</a>
+                        </li>
+                    @else
 
+                        <a href="{{ route('clients.showEach', Auth::user()->id) }}" class="nav-link">Meus Clientes</a>
+
+                    @endif
+                @endif
 
                 </ul>
 
-                <h1 class="text-light">Sua Agenda</h1>
+                <h1 class="text-light"><a href="{{ route('home.index') }}" class="nav-link text-white">Sua Agenda</a></h1>
 
                 <ul class="navbar-nav">
                     @if(Auth::user())
@@ -63,12 +70,15 @@
             </nav>
     </header>
 
-    <div class="container">
-        @yield('body')
-    </div>
+    <main>
+        <div class="container">
+            @yield('body')
+        </div>
 
-    <footer>
-        <div class="navbar navbar-expand-lg navbar-dark bg-dark">
+    </main>
+
+    <footer class="">
+        <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
             <div class="container-fluid">
                 <p class="text-white">Projeto planejado e produzido por 
                     <a class="navbar-brand badge-base__link LI-simple-link" href="https://br.linkedin.com/in/douglasalves-dev-back-end?trk=profile-badge" target="_blank">Douglas Alves</a>

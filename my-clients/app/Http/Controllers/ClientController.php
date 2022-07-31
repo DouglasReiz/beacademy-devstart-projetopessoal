@@ -68,13 +68,16 @@ class ClientController extends Controller
 
         if($request ->image){
             $file = $request['image'];
-            $path = $file->store('profile','public');
+            $path = $file->store('clients','public');
             $data['image'] = $path;
         }
 
-        $this ->model->create($data);
+
+
+        $this->clients->create($data);
 
         $request->session()->flash('create','cliente cadastrado com sucesso');
+
 
         return redirect()->route('clients.index')->with('create','cliente cadastrado com sucesso');
     }

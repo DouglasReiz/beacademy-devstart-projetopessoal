@@ -4,7 +4,7 @@
 
 
 
-    <div class="container">
+    <div class="container mx-5">
         
         <div class="title">
             <h1>Login</h1>

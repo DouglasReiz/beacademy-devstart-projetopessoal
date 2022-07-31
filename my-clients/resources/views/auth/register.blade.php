@@ -2,14 +2,14 @@
 @section('title', 'Login')
 @section('body')
 
-<div class="s-register">
+<div class="s-register py-5">
     
-    <div class="container">
-        <div class="title-register">
+    <div class="container mx-5">
+        <div class="title-register mb-5">
             <h1>Registre-Se</h1>
         </div>
     
-        <form class="form-register" method="POST" action="{{ route('register') }}">
+        <form class="form-register" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
             @csrf
             <!-- Name input -->
             <div class="mb-3">
@@ -39,8 +39,8 @@
             </div>
 
             <!-- Submit button -->
-            <div class="mb-3">
-                <button type="submit" class="btn-primary">Registrar</button>
+            <div class="mb-5">
+                <button type="submit" class="btn btn-primary">Registrar</button>
             </div>
         </form>
     </div>

@@ -7,7 +7,7 @@
       <h1>Novo Cliente</h1>
     </div>
         
-    <form class="form-create" action="{{route('clients.store')}}" method="POST" enctype="multipart/form-data">
+    <form class="form-create py-5" action="{{route('clients.store')}}" method="POST" enctype="multipart/form-data">
     
       @csrf
     
@@ -39,6 +39,11 @@
       <div class="mb-3">
         <label for="image" class="form-label">selecione uma imagem</label>
         <input type="file" class="form-control" id="image" name="image">
+      </div>
+
+      <div class="mb-3">
+        <label for="image" class="form-label">selecione uma imagem</label>
+        <input type="text" class="form-control" disabled id="user_id" name="user_id" value="{{ Auth::user()->id }}">
       </div>
       
       <button type="submit" class="btn btn-primary mb-4">Enviar</button>

@@ -72,12 +72,9 @@ class ClientController extends Controller
             $data['image'] = $path;
         }
 
-
-
         $this->clients->create($data);
 
         $request->session()->flash('create','cliente cadastrado com sucesso');
-
 
         return redirect()->route('clients.index')->with('create','cliente cadastrado com sucesso');
     }
@@ -104,6 +101,15 @@ class ClientController extends Controller
         $request->session()->flash('update','cliente atualizado com sucesso');
 
         return redirect()->route('clients.index')->with('update','cliente atualizado com sucesso');
+    }
+
+    public function destroy($id){
+        if(!$client = $this->clients->find($id))
+            return redirect()->back();
+
+        $client->delete($id);
+
+        return redirect()->route('clients.index');
     }
 
     

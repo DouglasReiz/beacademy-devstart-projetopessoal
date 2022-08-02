@@ -67,20 +67,28 @@ class UserTest extends TestCase
 
     public function test_show_user()
     {
-        $user = User::factory()->create();
-        
-        $response = $this->put('/users/{id}', [
-            $user -> name     => 'Admin jr',
-            $user -> email    => 'admin@master.com.br',
-            $user -> password => '1q2w3e4r',
-            $user -> is_admin => 1
+        $user = User::factory()->create([
+            'is_admin' => 1
         ]);
         
-        $this->actingAs($user)
-            ->get('/users/show');
-
-        $response = $this->get('/users');
+        $response = $this->actingAs($user)->get('/users/'.$user->id);
 
         $response->assertStatus(200);
     }
+
+    public function test_delete_user()
+    {
+        $user = User::factory()->create([
+            'is_admin' => 1
+        ]);
+        
+        $response = $this->actingAs($user)->delete('/users/'.$user->id);
+
+        $response = $this->actingAs($user)
+                        ->get('/users');
+
+        $response->assertStatus(200);
+    }
+
+    
 }

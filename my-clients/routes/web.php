@@ -25,13 +25,13 @@ Route::middleware(['auth'])->group(function(){
     Route::get('/users', [UserController::class, 'index'])->name('users.index');
     Route::get('/users/{id}', [UserController::class, 'show'])->name('users.show');
     
-    Route::delete('/clients/{id}', [ClientController::class, 'delete'])->name('clients.delete');
     Route::get('/clients/create', [ClientController::class, 'create'])->name('clients.create');
     Route::post('/clients', [ClientController::class, 'store'])->name('clients.store');
     Route::get('/clients', [ClientController::class,'index'])->name('clients.index');
     Route::put('/client/{id}', [ClientController::class, 'Update'])->name('client.update');
     Route::get('/clients/{id}/edit', [ClientController::class, 'edit'])->name('clients.edit');
     Route::get('/users/{id}/clients', [ClientController::class, 'showMines'])->name('clients.showEach');
+    Route::delete('/clients/{id}', [ClientController::class, 'destroy'])->name('clients.delete');
     Route::get('/clients/{id}', [ClientController::class, 'show'])->name('clients.show');
 
 });

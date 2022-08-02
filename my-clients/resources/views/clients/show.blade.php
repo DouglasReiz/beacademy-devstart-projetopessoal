@@ -40,7 +40,8 @@
                             <form action="{{ route('clients.delete', $client->id) }}" method="Post">
                                 @method('DELETE')
                                 @csrf
-                                <button type="submit" class="btn btn-danger">excluir</button>
+    
+                                <button type="submit" class="btn btn-danger">Deletar</button>
                             </form>
                         </td>
                     </tr>

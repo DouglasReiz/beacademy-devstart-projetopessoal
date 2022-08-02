@@ -2,6 +2,21 @@
 @section('title', 'Novo Cliente')
 @section('body')
 
+@if(session()->has('create'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Atenção</strong> {{ session()->get('create') }}.
+        <button class="closebtn" onclick="this.parentElement.style.display='none';">&times;</button>
+    </div>
+@endif
+
+@if(session()->has('update'))
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Atenção</strong> {{ session()->get('update') }}.
+        <a class="closebtn" onclick="this.parentElement.style.display='none';">&times;</a>
+    </div>
+@endif
+
+
   <div class="container mt-4">
     <div class="title-create">
       <h1>Novo Cliente</h1>
@@ -42,8 +57,8 @@
       </div>
 
       <div class="mb-3">
-        <label for="image" class="form-label">selecione uma imagem</label>
-        <input type="text" class="form-control" disabled id="user_id" name="user_id" value="{{ Auth::user()->id }}">
+        <label for="user_id" class="form-label">Pertence ao usuário</label>
+        <input type="text" class="form-control" id="user_id" name="user_id" value="{{ Auth::user()->id }}">
       </div>
       
       <button type="submit" class="btn btn-primary mb-4">Enviar</button>

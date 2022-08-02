@@ -30,6 +30,7 @@ class StoreUpdateClientsFormRequest extends FormRequest
             'phone'=> 'required|string|min:9|unique:clients,phone,{$id},id',
             'request'=>'string|max:200|min:1',
             'trademark'=>'string|max:100|min:1',
+            'user_id'=>'required'
             
         ];
 

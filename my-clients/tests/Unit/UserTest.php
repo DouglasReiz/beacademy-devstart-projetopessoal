@@ -22,4 +22,14 @@ class UserTest extends TestCase
     {
        $this->assertTrue(true);
     }
+
+    public function test_show_user()
+    {
+       $this->assertTrue(true);
+    }
+
+    public function test_delete_user()
+    {
+       $this->assertTrue(true);
+    }
 }

@@ -31,7 +31,6 @@ class StoreUpdateClientsFormRequest extends FormRequest
             'request'=>'string|max:200|min:1',
             'trademark'=>'string|max:100|min:1',
             'user_id'=>'required'
-            
         ];
 
         if($this->method('PUT'))

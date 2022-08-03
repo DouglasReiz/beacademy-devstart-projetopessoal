@@ -4,7 +4,7 @@
 
 <div class="s-edit">
 
-    <div class="container mt-4">
+    <div class="container mt-4 pb-5">
 
         <div class="title-edit">
             <h1>Usuário {{$client->name}}</h1>

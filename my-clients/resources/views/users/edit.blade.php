@@ -4,7 +4,7 @@
 
 <div class="s-edit">
 
-    <div class="container mt-4">
+    <div class="container my-3 pb-5">
         <h1>Usuário {{$user->name}}</h1>
     
         <form class="form-edit" action="{{route('users.update', $user->id)}}" method="post" enctype="multipart/form-data">

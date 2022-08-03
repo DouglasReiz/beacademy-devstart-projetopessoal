@@ -26,6 +26,7 @@
             <div class="mb-3">
                 <label class="form-label" for="password">Senha</label>
                 <input type="password" id="password" class="form-control" name="password"/>
+                <label class="form-label" for="password">A senha deve conter no mínimo 8 caractéres.</label>
             </div>
             <!-- Confirm Password input -->
             <div class="mb-3">

@@ -6,7 +6,7 @@
 <div class="s-client">
     <div class="container">
         <div class="title-box">
-            <h1>Listagem de Clientes do {{Auth::user()->name}}</h1>
+            <h1>Listagem de Clientes de {{Auth::user()->name}}</h1>
         </div>
         
         @if(session()->has('create'))

@@ -22,7 +22,7 @@
 <body>
     <header>
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <div class="container-fluid">
+                <div class="container-fluid ">
                 <ul class="navbar-nav">
                 @if(Auth::user())
                     @if(Auth::user()->is_admin)
@@ -79,7 +79,7 @@
 
     <footer class="">
         <div class="navbar navbar-expand-lg navbar-dark bg-dark fixed-bottom">
-            <div class="container-fluid">
+            <div class="container-fluid ">
                 <p class="text-white">Projeto planejado e produzido por 
                     <a class="navbar-brand badge-base__link LI-simple-link" href="https://br.linkedin.com/in/douglasalves-dev-back-end?trk=profile-badge" target="_blank">Douglas Alves</a>
                 </p>

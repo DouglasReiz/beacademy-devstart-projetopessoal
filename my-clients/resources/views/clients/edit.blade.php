@@ -10,6 +10,16 @@
             <h1>Usuário {{$client->name}}</h1>
         </div>
 
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
     
         <form class="form-edit" action="{{route('client.update', $client->id)}}" method="post" enctype="multipart/form-data">
           @method('PUT')

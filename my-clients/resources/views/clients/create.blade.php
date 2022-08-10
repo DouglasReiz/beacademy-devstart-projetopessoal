@@ -2,25 +2,23 @@
 @section('title', 'Novo Cliente')
 @section('body')
 
-@if(session()->has('create'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Atenção</strong> {{ session()->get('create') }}.
-        <button class="closebtn" onclick="this.parentElement.style.display='none';">&times;</button>
-    </div>
-@endif
 
-@if(session()->has('update'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Atenção</strong> {{ session()->get('update') }}.
-        <a class="closebtn" onclick="this.parentElement.style.display='none';">&times;</a>
-    </div>
-@endif
 
 
   <div class="container mt-4">
     <div class="title-create">
       <h1>Novo Cliente</h1>
     </div>
+
+    @if ($errors->any())
+      <div class="alert alert-danger">
+          <ul>
+              @foreach ($errors->all() as $error)
+                  <li>{{ $error }}</li>
+              @endforeach
+          </ul>
+      </div>
+    @endif
         
     <form class="form-create py-5" action="{{route('clients.store')}}" method="POST" enctype="multipart/form-data">
     

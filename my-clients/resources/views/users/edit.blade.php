@@ -7,6 +7,16 @@
     <div class="container my-3 pb-5">
         <h1>Usuário {{$user->name}}</h1>
     
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <form class="form-edit" action="{{route('users.update', $user->id)}}" method="post" enctype="multipart/form-data">
           @method('PUT')
           @csrf

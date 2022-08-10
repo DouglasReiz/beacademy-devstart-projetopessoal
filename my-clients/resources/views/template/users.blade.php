@@ -83,8 +83,8 @@
                 <p class="text-white">Projeto planejado e produzido por 
                     <a class="navbar-brand badge-base__link LI-simple-link" href="https://br.linkedin.com/in/douglasalves-dev-back-end?trk=profile-badge" target="_blank">Douglas Alves</a>
                 </p>
-                <div class="badge-base LI-profile-badge" data-locale="pt_BR" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="douglasalves-dev-back-end" data-version="v1"></div>
             </div>
+            
         </div>
     </footer>
 </body>

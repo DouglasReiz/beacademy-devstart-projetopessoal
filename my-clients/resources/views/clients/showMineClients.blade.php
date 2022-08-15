@@ -32,7 +32,6 @@
             <table class="table table-dark table-striped">
                 <thead>
                     <tr>
-                        <th scope="col">Id</th>
                         <th scope="col">Nome</th>
                         <th scope="col">Email</th>
                         <th scope="col">Data Cadastro</th>
@@ -42,8 +41,7 @@
                 <tbody>
                     @foreach($clients as $client)
                     <tr>
-                        <th scope="row">{{ $client->id }}</th>
-                        <td>{{ $client->name }}</td>
+                        <td scope="row">{{ $client->name }}</td>
                         <td>{{ $client->email }}</td>
                         <td>{{ date('d/m/y - H:i', strtotime($client->created_at)) }}</td>
                         <td>

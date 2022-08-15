@@ -9,7 +9,9 @@
     <div class="col-lg-6 mx-auto my-4 text-center">
         <p class="lead mb-4">Vamos direto ao ponto, veja seus clientes.</p>
 
-        <a href="{{ route('clients.showEach', Auth::user()->id) }}" class="btn btn-outline-dark">Meus Clientes</a>
+        <a href="{{ route('clients.showEach', Auth::user()->id) }}" class="btn btn-outline-dark">Meus Clientes {{Auth::user()->clients->count()}}</a>
+
+        <a href="{{ route('clients.create') }}" class="btn btn-outline-dark">Novo cliente</a>
     </div>
 
 </div>

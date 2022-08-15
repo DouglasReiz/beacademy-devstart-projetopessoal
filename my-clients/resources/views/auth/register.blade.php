@@ -8,6 +8,16 @@
         <div class="title-register mb-5">
             <h1>Registre-Se</h1>
         </div>
+
+        @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
     
         <form class="form-register" method="POST" action="{{ route('register') }}" enctype="multipart/form-data">
             @csrf

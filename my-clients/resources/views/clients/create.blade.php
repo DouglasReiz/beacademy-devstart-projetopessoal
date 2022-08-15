@@ -6,7 +6,7 @@
 
 
   <div class="container mt-4">
-    <div class="title-create">
+    <div class="title-create text-center">
       <h1>Novo Cliente</h1>
     </div>
 
@@ -20,7 +20,7 @@
       </div>
     @endif
         
-    <form class="form-create py-5" action="{{route('clients.store')}}" method="POST" enctype="multipart/form-data">
+    <form class="form-create mt-3 px-5 pb-5" action="{{route('clients.store')}}" method="POST" enctype="multipart/form-data">
     
       @csrf
     

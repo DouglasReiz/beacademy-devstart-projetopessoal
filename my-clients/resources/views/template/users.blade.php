@@ -41,7 +41,12 @@
 
                 </ul>
 
-                <h1 class="text-light"><a href="{{ route('home.index') }}" class="nav-link text-white">Sua Agenda</a></h1>
+                @if(Auth::user())
+                <h1 class="text-light"><a href="{{ route('home.index') }}" class="nav-link text-white">Sua Carteira</a></h1>
+
+                @else
+                <h1 class="text-light"><a href="{{ route('page.index') }}" class="nav-link text-white">Sua Carteira</a></h1>
+                @endif
 
                 <ul class="navbar-nav">
                     @if(Auth::user())

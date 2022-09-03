@@ -10,7 +10,7 @@ require __DIR__.'/auth.php';
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('page.index');
 
 
 Route::middleware(['auth'])->group(function(){
